@@ -1,0 +1,45 @@
+  /* the button */
+  .hiddenMessage_readMoreBtn {
+    width:150px;
+    cursor: pointer;
+    margin-top:10%;
+  }
+
+  .hiddenMessage_readMoreBtn a{
+    color:var(--blue);
+    border:1px solid var(--blue);
+    border-radius:100px;
+    width:200px;
+    padding-bottom:5px;
+    display:flex;
+    justify-content:center;
+    transition:0.4s all;
+  }
+
+  @supports (-moz-appearance:none) {
+    .hiddenMessage_readMoreBtn a {
+      padding-bottom:0px;
+      padding-top:5px
+    }
+  }
+
+  .hiddenMessage_readMoreBtn a:hover {
+    color:var(--white);
+    background:var(--blue);
+  }  
+
+  /* the message */
+  .hiddenMessage_container {
+    visibility: hidden;
+    position:relative;
+    top:-10px;
+    height:0;
+    opacity:0;
+    transition:0.4s all;
+  }
+  .hiddenMessage_show {
+    height: auto;
+    visibility: visible;
+    top:0px;
+    opacity:1;
+  }
